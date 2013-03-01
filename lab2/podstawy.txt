@@ -1,0 +1,23 @@
+a) czym jest system kontroli wersji
+System kontroli wersji  jest to oprogramowanie s³u¿¹ce do œledzenia zmian g³ównie w kodzie Ÿród³owym oraz pomocy programistom w ³¹czeniu zmian dokonanych przez wiele osób w ró¿nych momentach. GIT to rozproszony system kontroli wersji, jego autorem jest Linus Torvalds, twórca Linuksa. GIT jest oprogramowaniem open source na licencji GNU GPL. Torvalds potrzebuj¹c dobrego i szybkiego rozproszonego systemu kontroli wersji szuka³ gotowych rozwi¹zañ, jednak ¿adne go nie satysfakcjonowa³o, wiêc postanowi³ napisaæ w³asne, co mia³o miejsce w 2005 roku. Wiele du¿ych projektów korzysta z GITa jako systemu kontroli wersji: Android, Digg, GIMP, jQuery, Linux, phpMyAdmin czy Symfony.
+ b) jak wygl¹da typowy "workflow"
+ Pojêcie workflow jest u¿ywane w odniesieniu do oprogramowania, zw³aszcza s³u¿¹cego wspomagania pracy grupowej. Oprogramowanie takie pozwala na okreœlenie jakie role w przetwarzaniu dokumentów pe³ni¹ osoby uczestnicz¹ce w wykonywaniu danej czynnoœci oraz jakie s¹ stany poœrednie dokumentów. Jako przyk³ad mo¿na podaæ realizacjê obiegu delegacji w firmie. Osoby zlecaj¹ce wykonanie pracy zwi¹zanej z podró¿¹ s³u¿bow¹ generuj¹ dane wejœciowe (miejsce do którego ma dojechaæ okreœlony pracownik), powstaje dokument zg³oszenia delegacji. Dane s¹ nastêpnie odbierane przez osobê realizuj¹c¹ zadanie (proponowany jest np. termin wyjazdu, rodzaj œrodka transportu itp.), ze zg³oszenia powstaje dokument delegacji. Informacje te trafiaj¹ z powrotem do decydentów, którzy akceptuj¹ informacje o realizacji zlecenia (np. zezwalaj¹ na przelot samolotem z Warszawy do Poznania), dokument delegacji zostaje zatwierdzony do wykonania. Pracownicy realizuj¹ zlecenie, potwierdzaj¹ odbycie delegacji u klienta, dokument delegacji staje siê zrealizowany, po czym nastêpuje akceptacja zwrotów kosztów podro¿y. Jak widaæ ka¿dy z etapów przetwarzania takiej informacji charakteryzuje siê okreœlonym zbiorem osób wykonuj¹cych okreœlone operacje na dokumentach oraz okreœlonym zestawem mo¿liwych stanów dokumentu. S¹ to charakterystyczne cechy procesu workflow. Procesy workflow przedstawia siê zwykle w postaci grafu.
+ c) czym ró¿ni scentralizowany i rozproszony system kontroli wersji
+ W sytemach scentralziowanych istnieje jedno centralne repozytorium, z którym wszyscy u¿ytkownicy systemu synchronizuj¹ swoje zmiany, a w systemach roproszonych pozwalaj¹ na prowadzenie równoprawnych, niezale¿nych ga³êzi, które mo¿na dowolnie synchronizowaæ ze sob¹ nawzajem, np. poprzez e-mail (Code Co-op). Wybór odpowiedniego typu systemu kontroli wersji zale¿y od potrzeb projektu.
+ d) wyt³umacz do czego s³u¿¹ polecenia: 
+ init- tworzenie nowego repozytorium
+ clone- clonowanie istniej¹cego repozytorium
+ add- dodaje zmienione pliki do wirtualnej listy
+ status- polecenie wyœwietli aktualny status pracy nad projektem. Dziêki niemu zobaczysz które pliki by³y modyfikowane, ale nie zosta³y jeszcze zapisane poleceniem commit
+diff- wyœwietla zmiany w repozytorium
+commit- tym poleceniem zapiszemy aktualny stan naszego projektu
+reset- resetuje zmiany w lokalnym repozytorium
+rm- usuwa plik z katalogu roboczego
+mv- zmiana nazwy pliku w repozytorium
+branch- Wyœwietla informacje o branch'ach dostêpnych w repozytorium
+checkout- prze³¹czanie siê pomiêdzy ró¿nymi ga³êziami kodu w naszym projekcie 
+merge- ³¹czy obie ga³êzie rozwi¹zuj¹c konflikty
+log- to polecenie s³u¿y nam do przejrzenia historii zmian dokonanych w projekcie
+stash- pozwala na chwilowe “odsuniêcie” aktualnie wprowadzonych do projektu zmian bez koniecznoœci commitowania ich
+pull- pobranie plików ze zdalnego repozytorium i automatyczne wykonanie merge
+push- wys³anie zmian na zdalny serwer
