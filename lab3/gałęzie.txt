@@ -1,0 +1,9 @@
+a)Je¿eli dokona siê zmian w repozytorium i siê je równie¿ zatwierdzi, kolejne zatwierdzenie zachowa wskaŸnik do zestawu zmian, który zosta³ utworzony bezpoœrednio przed w³aœnie dodawanym. Ga³¹Ÿ w Gicie jest po prostu lekkim, przesuwalnym wskaŸnikiem na któryœ z owych zestawów zmian. Domyœlna nazwa ga³êzi Gita to master. Kiedy zatwierdzasz pierwsze zmiany, otrzymujesz ga³¹Ÿ master, która wskazuje na ostatni zatwierdzony przez ciebie zestaw. Z ka¿dym zatwierdzeniem automatycznie przesuwa siê ona do przodu.
+b)
+Wed³ug konwencji, lokalny aktualny katalog roboczy w gicie jest nazywany "master". To jest po prostu nazwa ga³êzi, któr¹ git tworzy, kiedy zaczniesz puste repozytorium. Mo¿esz j¹ usun¹æ jeœli nie podoba Ci siê nazwa.
+Jeœli tworzysz swoje repozytorium przez klonowanie czyjegoœ repozytorium, zdalna ga³¹Ÿ "master" jest kopiowana na lokaln¹ ga³¹Ÿ nazwan¹ "origin". Mo¿esz mieæ swoj¹ w³asn¹ ga³¹Ÿ "master", która nie jest przywi¹zana do zdalnego repozytorium.
+c)
+Istnieje zawsze aktualna g³owica, zwana HEAD. (Aktualnie jest to link symboliczny, .git/HEAD, do pliku takiego jak refs/heads/master.) Git wymaga aby to zawsze wskazywa³o do katalogu refs/heads.
+d)
+git branch nazwa.ga³êzi- tworzenie nowej ga³êzi
+git checkout nazwa.ga³êzi- prze³¹czenie siê na istniej¹c¹ ga³¹Ÿ
