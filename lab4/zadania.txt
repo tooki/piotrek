@@ -1,0 +1,38 @@
+1.wyœwietlenie informacji o poleceniach (pomocy)
+help nazwa_polecenia
+2.wyœwietlanie zawartoœci bie¿¹cego katalogu
+dir
+3.utworzenie katalogu o nazwie 'katalog'
+mkdir katalog
+4.utworzenia pliku o nazwie 'plik.txt'
+echo tekst w pliku >>c:\plik.txt
+5.wyœwietlenie zawartoœci pliku 'plik.txt'
+type plik.txt
+6.przejœcie do katalogu nadrzêdnego
+cd ..
+7.przejœcie do katalogu 'lab4'
+cd C:\Users\student\Documents\GitHub\piotrek\lab4
+8.zmianê nazwy pliku 'plik.txt' na 'inny_plik.txt'
+ren c:\xxx\plik.txt inny_plik.txt
+
+
+1.podgl¹d wszystkich zatwierdzonych zmian
+git log
+2.podgl¹d wprowadzonych w repozytorium zmian
+git diff
+3.podgl¹d wprowadzonych zmian plików które s¹ juz w przechowalni
+git diff --staged
+4.podgl¹d zmian wprowadzonych w danym pliku
+git status
+5.usuwanie plików z repozytorium
+git rm
+6.dodawanie plików do przechowalni
+git add
+7.usuwanie plików z przechowalni
+git reset HEAD --plik.txt
+8.przenoszenie plików znajduj¹cych siê w przechowalni do innej ga³êzi
+git stash
+git checkout nazwagalezi
+git stash apply
+9.usuwanie ga³êzi
+git branch -d 'nazwaglêzi'
