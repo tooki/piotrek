@@ -1,0 +1,38 @@
+1.Diagram sekwencji s³u¿y do prezentowania interakcji pomiêdzy obiektami wraz z uwzglêdnieniem w czasie komunikatów, jakie s¹ przesy³ane pomiêdzy nimi. Na diagramie sekwencji obiekty u³o¿one s¹ wzd³u¿ osi X, a komunikaty przesy³ane s¹ wzd³u¿ osi Y. Zasadniczym zastosowaniem diagramów sekwencji jest modelowanie zachowania systemu w kontekœcie scenariuszy przypadków u¿ycia. Diagramy sekwencji pozwalaj¹ uzyskaæ odpowiedŸ na pytanie, jak w czasie przebiega komunikacja pomiêdzy obiektami. Dodatkowo diagramy sekwencji stanowi¹ podstawow¹ technikê modelowania zachowania systemu, które sk³ada siê na realizacjê przypadku u¿ycia.
+2.Diagram sekwencji – notacja i semantyka
+W celu budowania diagramów sekwencji nale¿y najpierw poznaæ elementy (klocki), z jakich te diagramy powstaj¹. Poni¿ej zamieszczono notacjê wraz
+z opisem najwa¿niejszych elementów s³u¿¹cych do kreowania diagramów sekwencji.
+3.Linia ¿ycia to rola uczestnika interakcji, jak¹ pe³ni w czasie jej trwania. Linia ¿ycia reprezentuje wspó³uczestnika interakcji i czas jego istnienia podczas realizacji scenariusza. Linie ¿ycia reprezentuj¹ konkretne byty – obiekty, systemy i mog¹ przyjmowaæ stereotypy, które œwiadcz¹ o roli, jak¹ pe³ni dany obiekt
+w systemie. Takimi stereotypami mog¹ byæ aktor (ang. actor), obiekt klasy granicznej (ang. boundary class), obiekt klasy steruj¹cej (ang. control class), obiekt klasy danych (ang. entity class).
+Wymienione rodzaje stereotypów obiektów s³u¿¹ do wskazania, jak¹ rolê w systemie pe³ni obiekt. Stereotyp aktora informuje, ¿e obiekt ten pe³ni funkcjê zewnêtrzn¹ w stosunku do systemu. Obiekt klasy granicznej reprezentuje interfejs miêdzy systemem a bytami wystêpuj¹cymi poza nim. Obiekt klasy steruj¹cej u¿ywany jest do sterowania dzia³aniem jednej lub wielu klas. Natomiast obiekt klasy danych, stosowany jest do reprezentowania danych, które musz¹ byæ zachowane w systemie.
+4.Komunikat
+Komunikat (ang. message) jest to informacja przesy³ana pomiêdzy obiektami. W jêzyku UML mo¿na korzystaæ z ró¿nych typów komunikatów (rys. 93). Komunikat synchroniczny oznacza, ¿e obiekt musi czekaæ na odpowiedŸ. Komunikat asynchroniczny nie wymaga oczekiwania na odpowiedŸ.
+5.Stosuj¹c na diagramie komunikaty synchroniczne, przyjmuje siê, ¿e natychmiast po jego wywo³aniu przychodzi odpowiedŸ. Taka konwencja pozwala na zmniejszenie liczby elementów na diagramie. W sytuacji, gdy modelowany fragment rzeczywistoœci jest inny ni¿ za³o¿enia konwencji, nale¿y umieœciæ komunikat zwrotny.
+Kolejnym typem wiadomoœci jest wiadomoœæ wewnêtrzna, któr¹ obiekt wysy³a sam do siebie. Tego typu wiadomoœci u¿ywa siê na przyk³ad w sytuacji, gdy obiekt wywo³uje swoj¹ w³asn¹ metodê.  Ostatnim rodzajem komunikatów s¹ komunikaty, które tworz¹ obiekt lub kasuj¹ go. Na zamieszczonym przyk³adzie (rys. 94) zaprezentowano oba rodzaje komunikatów. Komunikatem tworz¹cym obiekt jest „create()”, który tworzy obiekt „Us³uga1”. Wygenerowany obiekt ró¿ni siê od pozosta³ych (istniej¹cych przez ca³y czas trwania scenariusza) tym, ¿e jest umieszczony ni¿ej wzglêdem nich.
+Komunikat „destroy()” jest odpowiedzialny za zniszczenie obiektu, co jest zobrazowane znakiem X na koñcu linii ¿ycia obiektu „Us³uga1”.
+6.Fragment
+Fragment (ang. combined fragment) to konceptualnie zamkniêta czêœæ diagramu sekwencji, która rozszerza mo¿liwoœci obejmowanego przez siebie obszaru diagramu sekwencji. Fragment mo¿e zawieraæ w sobie pêtle, powtórzenia, scenariusze alternatywne lub wskazywaæ poziom abstrakcji modelowanego fragmentu systemu.
+
+Rodzaj fragmentu jest okreœlany poprzez umieszczenie odpowiedniego s³owa kluczowego w lewym górnym rogu. Poni¿ej opis wszystkich s³ów kluczowych, które mog¹ wyst¹piæ we fragmentach.
+
+alt – dzieli fragment interakcji zgodnie z warunkami logiki Boole’a na dwa alternatywne scenariusze; ka¿da  z alternatyw musi byæ opatrzona warunkiem dozoru, którego spe³nienie gwarantuje wykonanie danej alternatywy.
+assert – prezentuje fragment interakcji, który musi byæ wykonany zgodnie z za³o¿onymi warunkami i komunikatami.
+break – wskazuje fragment diagramu sekwencji, który realizowany jest po spe³nieniu warunku dozoru; spe³nienie warunku dozoru skutkuje wykonaniem sekwencji komunikatów zawartych we fragmencie, a nastêpnie wyjœcie ze scenariusza; w przypadku, gdy warunek dozoru nie jest spe³niony, komunikaty zawarte we fragmencie s¹ pomijane.
+consider – wskazuje fragment z list¹ nazw komunikatów, które s¹ wyselekcjonowane w tej czêœci interakcji; oznacza to, ¿e mimo innych komunikatów, które znajduj¹ siê w danej czêœci interakcji, pokazane zostan¹ tylko te, które s¹ wypisane w za s³owem kluczowym consider.
+critical – wskazuje, ¿e dany fragment diagramu sekwencji nie mo¿e byæ przerwany przez inny proces.
+ignore – wskazuje, ¿e w tym fragmencie interakcji znajduj¹siê wiadomoœci, które zosta³y pominiête, gdy¿ ich widocznoœæ nie zmienia zachowania systemu; zignorowane wiadomoœci s¹ wylistowane po s³owie ignore.
+loop – powtórzenie fragmentu interakcji okreœlon¹ warunkiem liczbê razy.
+neg – fragment prezentuj¹cy jedn¹ lub wiêcej wiadomoœci, które s¹ prawdopodobnie nieprawid³owe.
+opt – wskazuje opcjonalny fragment interakcji, który jest wykonywany po spe³nieniu warunku dozoru.
+par – prezentuje równoleg³e wykonywanie przep³ywu wiadomoœci.
+seq – wskazuje s³abo uszczegó³owiony fragment sekwencji, tzn. taki, który jest ogólny.
+strict – prezentuje szczegó³ow¹, ca³kowit¹ komunikacjê pomiêdzy obiektami.
+Mo¿liwoœæ stosowania fragmentów w diagramach sekwencji pomaga przy modelowaniu scenariuszy.
+
+Na pierwszym przyk³adzie zaprezentowano fragment ze s³owem kluczowym par, który wskazuje na dwa komunikaty, które przebiegaj¹ równolegle pomiêdzy tymi samymi obiektami. Natomiast drugi fragment, z parametrem opt zwraca uwagê na opcjonaln¹ mo¿liwoœæ wydrukowania Karty Wypo¿yczenia w sytuacji, gdy zostanie spe³niony warunek „klient potrzebuje kopiê Karty Wypo¿yczenia”.
+7.Wyst¹pienie interakcji
+Wyst¹pienie interakcji (ang. interaction occurence) jest odniesieniem (referencj¹) do interakcji, której obraz przedstawiony jest na innym diagramie. U¿ycie referencji pomaga uczyniæ diagram czytelniejszym, gdy¿ pozwala na ukrycie szczegó³ów nieistotnych z punktu widzenia modelowanej sytuacji. Zamieszczony przyk³ad przedstawia sytuacjê, gdy scenariusz „SprawdŸ listê wypo¿yczeñ” wymaga zalogowania siê pracownika do systemu.
+8.Punkt koñcowy i startowy
+Punkt koñcowy (ang. end point) i punkt startowy (ang. found point) to elementy prezentuj¹ce byty spoza diagramu sekwencji, który jest nieznanym Ÿród³em wiadomoœci lub nieznanym celem wiadomoœci.
+
+Punkt koñcowy wskazuje na nieznany byt poza diagramem sekwencji. Natomiast punkt startowy umo¿liwia dostarczenie zewnêtrznego komunikatu bez przedstawiania bytu.
